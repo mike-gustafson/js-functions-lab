@@ -112,19 +112,8 @@ Example: maxOfThree(17, 4, 9) should return 17.
 Complete the exercise in the space below:
 */
 
-const maxOfThree = (num1, num2, num3) => {
-    let max = num1
-    let currentNum = 0
-    let numbers = [num1, num2, num3]
-
-    for (let i=0; i<numbers.length; i++) {
-        currentNum = numbers[i]
-        if (currentNum > max) {
-            max = currentNum
-        }
-    }
-
-    return max
+const maxOfThree = (...numbers) => {
+    return Math.max(...numbers)
 }
 
 console.log('Exercise 6 Result:', maxOfThree(5, 10, 8));
@@ -192,13 +181,13 @@ Complete the exercise in the space below:
 const basicCalculator = (num1, num2, method) => {
     switch (method) {
         case 'subtract': 
-            return (num1-num2)
+            return num1-num2
         case 'add':
-            return (num1+num2)
+            return num1+num2
         case 'multiply':
-            return (num1*num2)
+            return num1*num2
         case 'divide':
-            return (num1/num2)
+            return num1/num2
     }
 }
 
