@@ -190,17 +190,15 @@ Complete the exercise in the space below:
 */
 
 const basicCalculator = (num1, num2, method) => {
-    if (method === 'subtract') {
-        return (num1-num2)
-    }
-    if (method === 'addition') {
-        return (num1+num2)
-    }
-    if (method === 'multiply') {
-        return (num1*num2)
-    }
-    if (method === 'divide') {
-        return (num1/num2)
+    switch (method) {
+        case 'subtract': 
+            return (num1-num2)
+        case 'addition':
+            return (num1+num2)
+        case 'multiply':
+            return (num1*num2)
+        case 'divide':
+            return (num1/num2)
     }
 }
 
