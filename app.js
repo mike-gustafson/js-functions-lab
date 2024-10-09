@@ -193,7 +193,7 @@ const basicCalculator = (num1, num2, method) => {
     switch (method) {
         case 'subtract': 
             return (num1-num2)
-        case 'addition':
+        case 'add':
             return (num1+num2)
         case 'multiply':
             return (num1*num2)
