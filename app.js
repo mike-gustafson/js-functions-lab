@@ -150,15 +150,8 @@ Example: convertTemperature(32, 'F') should return 0 (Celsius).
 Complete the exercise in the space below:
 */
 
-const convertTemperature = (temp, scale) => {
-    if (scale = "C") {
-        return (temp*(9/5)+32)
-    }
-
-    if (scale = "F") {
-        return (temp-32*(9/5))
-    }
-}
+const convertTemperature = (temp, scale) => 
+    scale === "C" ? (temp*(9/5))+32 : scale === "F" ? (temp-32)*(5/9) : 'error'
 
 console.log('Exercise 8 Result:', convertTemperature(32, "C"));
 
@@ -208,21 +201,8 @@ Example: calculateGrade(100) should return A.
 Complete the exercise in the space below:
 */
 
-const calculateGrade = (percent) => {
-    const scale = [
-        {grade: "A", min: 90, max: 100},
-        {grade: "B", min: 80, max: 89},
-        {grade: "C", min: 70, max: 79},
-        {grade: "D", min: 60, max: 69},
-        {grade: "F", min: 0, max: 59}
-    ]
-
-    for (let i=0; i<scale.length; i++) {
-        if ((percent <= scale[i].max) && (percent >= scale[i].min)) {
-            return scale[i].grade
-        }
-    }
-}
+const calculateGrade = (percent) =>
+    percent >= 90 ? 'A' : percent >= 80 ? 'B' : percent >= 70 ? 'C' : percent >= 60 ? 'D' : 'F';
 
 console.log('Exercise 10 Result:', calculateGrade(85));
 
